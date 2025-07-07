@@ -44,6 +44,5 @@ export class DemoqaEllementPage {
     await page.setInputFiles('.form-control-file', 'C:/Users/Dell/Desktop/pratc/tests/Screenshot (31).png')
     await page.getByText('Dynamic Properties').click()
     await page.getByText('Color Change').click()
-    await page.getByText('Visible After 5 Seconds').click()
   }
 }
