@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 test('Alerts', async ({ page }) => {
+    test.setTimeout(60000)
     await page.goto('https://demoqa.com/alertsWindows')
     await page.getByText('Alerts', {exact: true}).click()
     page.once('dialog', async dialog=> {

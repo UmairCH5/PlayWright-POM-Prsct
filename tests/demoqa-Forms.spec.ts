@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 test('Demo QA:', async ({ page }) => {
+    test.setTimeout(50000)
     await page.goto('https://demoqa.com/forms')
     await page.getByText('Practice Form').click()
     await page.getByPlaceholder('First Name').fill('Umair')

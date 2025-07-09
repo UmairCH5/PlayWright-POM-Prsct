@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 test('Iframe task with frameLocator', async ({ page }) => {
+  test.setTimeout(50000)
   await page.goto('https://demoqa.com/alertsWindows')
   await page.getByText('Frames', {exact: true}).click()
   const frame1Heading = page.frameLocator('#frame1').locator('#sampleHeading')

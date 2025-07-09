@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 test('Demoqa-BrokenLink', async({page}) =>{
+    test.setTimeout(40000)
     await page.goto('https://demoqa.com/broken')
     await page.getByText('Click Here for Broken Link').getAttribute('href')
     await page.getByText('Click Here for Broken Link').getAttribute('href')

@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 test('Demoqa-alertsWindow', async({page}) =>{
+    test.setTimeout(50000)
     await page.goto('https://demoqa.com/alertsWindows')
     await page.getByText('Browser Windows').click()
     const [newpage] = await Promise.all([
